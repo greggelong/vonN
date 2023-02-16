@@ -77,7 +77,7 @@ function updateGrid() {
       // 5 dead cases 
       else {
          
-        if (n == 1 || n== 4){
+        if (n == 1|| n== 4 ){
           // if 4 neighbors come to life
           nextGrid[j][i] = 1
         } else{
