@@ -42,7 +42,9 @@ function makeGrid() {
       
     }
   }
-  // set one cell alive
+  // set some cells alive
+  //grid[25][25]=1;
+  //grid[75][75]=1;
   grid[50][50]=1;
   //grid[31][30]=1;
   //grid[29][30]=1;
@@ -65,7 +67,7 @@ function updateGrid() {
       let n =  (grid[j-1][i])+(grid[j+1][i])+(grid[j][i+1])+(grid[j][i-1])
       
       if (grid[j][i]==1) {
-        if ( n==4 || n==0){
+        if ( n==0 || n==4){
           // if 1 or 4 die
           nextGrid[j][i] = 0
         } else{
