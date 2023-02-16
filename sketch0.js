@@ -1,8 +1,8 @@
 let grid = [];
 let nextGrid = [];
 let cnv;
-let gsz = 60;
-let sz = 10;
+let gsz = 100;
+let sz = 6;
 let img;
 let gen =1
 
@@ -17,7 +17,7 @@ function setup() {
   //showGrid();
   //update();
   //showGrid();
-  frameRate(3)
+  frameRate(8);
   noStroke();
 }
 
@@ -43,7 +43,7 @@ function makeGrid() {
     }
   }
   // set one cell alive
-  grid[30][30]=1;
+  grid[50][50]=1;
   //grid[31][30]=1;
   //grid[29][30]=1;
 
