@@ -62,33 +62,126 @@ function updateGrid() {
   
   for (let j = 1; j < gsz - 1; j++) {
     for (let i = 1; i < gsz - 1; i++) {
-      //check east west of alive cell
-      // 5 alive cases
-      let n =  (grid[j-1][i])+(grid[j+1][i])+(grid[j][i+1])+(grid[j][i-1])
-      
+      // check neighbors line binary number to decimal 
+      //   1
+      //  8x2   
+      //   4
+      let n = 0 
+      if (grid[j-1][i] ==1) n+=1
+      if (grid[j][i+1]==1 ) n+=2
+      if (grid[j+1][i]== 1) n+=4
+      if (grid[j][i-1]==1 ) n+=8
+      // now you can make specific rules from 0 to 15
+      // ***** rules for live cells******
       if (grid[j][i]==1) {
-        if ( n==0 || n==4){
-          // if 1 or 4 die
-          nextGrid[j][i] = 0
-        } else{
-          // else 
-          nextGrid[j][i] = 1
+        switch(n){
+          case 0:
+            nextGrid[j][i] = 1;
+            break;
+          case 1:
+            nextGrid[j][i] = 1;
+            break;
+          case 2:
+            nextGrid[j][i] = 1;
+            break;
+          case 3:
+            nextGrid[j][i] = 1;
+            break;
+          case 4:
+            nextGrid[j][i] = 1;
+            break;
+          case 5:
+            nextGrid[j][i] = 0;
+            break;
+          case 6:
+            nextGrid[j][i] = 1;
+            break;
+          case 7:
+            nextGrid[j][i] = 1;
+            break;
+          case 8:
+            nextGrid[j][i] = 1;
+            break;
+          case 9:
+            nextGrid[j][i] = 1;
+            break;
+          case 10:
+            nextGrid[j][i] = 0;
+            break;
+          case 11:
+            nextGrid[j][i] = 1;
+            break;
+          case 12:
+            nextGrid[j][i] = 1;
+            break;
+          case 13:
+            nextGrid[j][i] = 1;
+            break;
+          case 14:
+            nextGrid[j][i] = 1;
+            break;
+          case 15:
+            nextGrid[j][i] = 0;
+            break;
         }
-        
       }
-      // 5 dead cases 
-      else {
-         
-        if (n == 1|| n== 4 ){
-          // if 4 neighbors come to life
-          nextGrid[j][i] = 1
-        } else{
-          nextGrid[j][i] = 0
+            // ***** rules for dead cells******
+      if (grid[j][i]==0) {
+        switch(n){
+          case 0:
+            nextGrid[j][i] = 0;
+            break;
+          case 1:
+            nextGrid[j][i] = 1;
+            break;
+          case 2:
+            nextGrid[j][i] = 1;
+            break;
+          case 3:
+            nextGrid[j][i] = 0;
+            break;
+          case 4:
+            nextGrid[j][i] = 1;
+            break;
+          case 5:
+            nextGrid[j][i] = 0;
+            break;
+          case 6:
+            nextGrid[j][i] = 0;
+            break;
+          case 7:
+            nextGrid[j][i] = 0;
+            break;
+          case 8:
+            nextGrid[j][i] = 1;
+            break;
+          case 9:
+            nextGrid[j][i] = 0;
+            break;
+          case 10:
+            nextGrid[j][i] = 0;
+            break;
+          case 11:
+            nextGrid[j][i] = 0;
+            break;
+          case 12:
+            nextGrid[j][i] = 0;
+            break;
+          case 13:
+            nextGrid[j][i] = 0;
+            break;
+          case 14:
+            nextGrid[j][i] = 0;
+            break;
+          case 15:
+            nextGrid[j][i] = 1;
+            break;
         }
-      }
+      
     }
   
   }
+}
   // copy new grid into old grid
 
   for (let j = 0; j < gsz; j++) {
