@@ -65,7 +65,7 @@ function updateGrid() {
       let n =  (grid[j-1][i])+(grid[j+1][i])+(grid[j][i+1])+(grid[j][i-1])
       
       if (grid[j][i]==1) {
-        if ( n==4 || n==1){
+        if ( n==4 || n==0){
           // if 1 or 4 die
           nextGrid[j][i] = 0
         } else{
