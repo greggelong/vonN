@@ -122,7 +122,7 @@ function updateGrid() {
             nextGrid[j][i] = cgs;
             break;
           case 14:
-            nextGrid[j][i] = cgs;
+            nextGrid[j][i] = 0;
             break;
           case 15:
             nextGrid[j][i] = 0;
