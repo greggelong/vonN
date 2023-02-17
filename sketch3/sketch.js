@@ -5,7 +5,7 @@ let gsz = 100;
 let sz = 6;
 let img;
 let gen =0
-let clr = 200
+let clr = 90
 
 
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
   //showGrid();
   //update();
   //showGrid();
-  //colorMode(HSB,clr)
+  colorMode(HSB,clr)
   frameRate(8);
   noStroke();
 }
@@ -233,7 +233,7 @@ function showGrid() {
     for (let i = 0; i < gsz; i++) {
       if (grid[j][i].st==1){  //is alive
         
-        fill(255-((grid[j][i].gn*2)%255),10,(grid[j][i].gn*2)%255)
+        fill(grid[j][i].gn%clr,300,300)
       }else{
       fill(0,0,0)
       }
