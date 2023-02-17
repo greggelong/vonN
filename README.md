@@ -11,3 +11,6 @@ Some notes on rules:  if you start with a single living cell you better have a r
 north is 1, east is 2, south is 4, and west is 8.  for example this lets me set a rule for coming to life if a dead cell has two neighbors that are opposite, a count that is 10 (east and west) or a count of 5 (north and south). At the moment it is pretty messy. I have 16 rules for live cells and 15 rules for dead cells in switch cases.  I will put some interactive DOM element for the user to choose.  live at: https://greggelong.github.io/vonN/sketch1
 
 3. sketch2 -- alters sketch1 to have the grid keep track of the generation in which the cell come alive and maps to HSB color. live at: https://greggelong.github.io/vonN/sketch2
+
+4. sketch3 -- added a javascript object to the 2d array to keep track of cell generations and states.  This version has an interesting rule set that almost tells a story.  This same rule set can be altered slightly to tell different stories.
+live cells die 1,2,4,8,15  dead cells come to life 1,2,4,7,8,11,13,14. live at: https://greggelong.github.io/vonN/sketch3
