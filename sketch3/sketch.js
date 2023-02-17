@@ -5,7 +5,7 @@ let gsz = 100;
 let sz = 6;
 let img;
 let gen =0
-let clr = 90
+let clr = 200
 
 
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
   //showGrid();
   //update();
   //showGrid();
-  colorMode(HSB,clr)
+  //colorMode(HSB,clr)
   frameRate(8);
   noStroke();
 }
@@ -233,7 +233,7 @@ function showGrid() {
     for (let i = 0; i < gsz; i++) {
       if (grid[j][i].st==1){  //is alive
         
-        fill(grid[j][i].gn%clr,300,300)
+        fill(255-((grid[j][i].gn*2)%255),10,(grid[j][i].gn*2)%255)
       }else{
       fill(0,0,0)
       }
@@ -245,6 +245,6 @@ function showGrid() {
 function keyPressed() {
   // this will download the first 25 seconds of the animation!
   if (key === 's') {
-    saveGif('glitchbig6.gif',35);
+    saveGif('vonN1.gif',35);
   }
 }
