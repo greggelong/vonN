@@ -19,7 +19,7 @@ function setup() {
   //update();
   //showGrid();
   colorMode(HSB,clr)
-  frameRate(8);
+  frameRate(18);
   noStroke();
 }
 
