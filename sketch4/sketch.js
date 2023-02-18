@@ -1,7 +1,7 @@
 let grid = [];
 let nextGrid = [];
 let cnv;
-let gsz = 100;
+let gsz = 101;
 let sz = 6;
 let img;
 let gen =0
