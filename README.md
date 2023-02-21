@@ -20,3 +20,13 @@ live cells die 1,2,4,8,15  dead cells come to life 1,2,4,7,8,11,13,14. live at: 
 6. Note about symmetry and a-symmetry.  I am not implementing an infinite grid of cells. My grid has bounds. The even or oddness of the number of cells in the grid effects the patters the CA creates.  (I first found this with Langton's ant simulations https://greggelong.github.io/antTurtle/).  Grids with an even number of cells create a-symmetric patterns from rule sets. Grids with odd numbers of cells will create symmetric patters for that same rule set. You can see this demonstrated in sketch 3 and sketch 4.  Even and a-symmetric  https://greggelong.github.io/vonN/sketch3    Odd and symmetric https://greggelong.github.io/vonN/sketch4
 
 7. Note: We can think of grid size as the organisms bounds, the same code produces different results, some organisms would have an advantage for their oddness or evenness.  
+
+8. more notes on symmetry and asymmetry
+- an odd grid size and an odd starting  will create the a type asymmetric filling
+- an odd grid size and even starting cell will not create asymmetirc filling
+- an even grid size and odd starting point creates asymmetric filling
+- an even grid size and even starting point creates asymmetric filling
+
+- cannot create symmetric non filling with even grid
+- odd grids can create both based whether or not the starting grid is even or odd
+
